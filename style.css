@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    transition: all 0.4s;
+}
+
+.bg{
+    position: absolute;
+    top: 0px;
+    width: 100vw;
+    height: 45vh;
+}
+
+.app-container{
+    width: 55vw;
+    min-width: 600px;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    top: 120px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.mode{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.task {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 50px;
+    height: auto;
+    padding: 6px;
+    font-size: 18px;
+    background-color: #fff;
+    border-bottom: 1px solid grey;
+    position: relative;
+}
+
+.task > p {
+    text-align: start;
+    width: 85%;
+    overflow-x: auto;
+}
+
+.task:nth-child(1){
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.task > input[type=checkbox] {
+    margin: 0px 15px;
+    cursor: pointer;
+}
+
+.over{
+    background-color: rgb(146, 146, 146) !important;
+}
+
+.cross{
+    opacity: 0;
+}
+
+.inputed-values-container, .actions-bar {
+    box-shadow: rgba(233, 233, 233, 0.2) 0px 8px 24px;
+}
+
+.task:hover .cross{
+    position: absolute;
+    display: inline-block;
+    opacity: 10;
+    right: 16px;
+    width: 13px;
+    cursor: pointer;
+}
+
+.input {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 16px 20px;
+    border-radius: 6px;
+    border: 1px solid grey
+}
+
+.actions-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    min-height: 46px;
+    height: auto;
+    display: none;
+}
+
+.bar {
+    border-bottom: 1px solid grey;
+    background-color: #fff;
+    display: flex;
+}
+
+.btn {
+    color: rgb(128, 128, 128);
+    font-size: bold;
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(0.96);
+}
+
+.items-left-info{
+    color: rgb(128, 128, 128);
+}
+
+/* .all-btn {
+    color: hsl(220, 98%, 61%);
+} */
+
+.active {
+    color: hsl(220, 98%, 61%);
+}
+
+.btn:hover {
+    color: hsl(0, 0%, 0%);
+}
+
+.message {
+    color: hsl(233, 11%, 84%);
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+input[type=checkbox]:checked + p {
+    text-decoration: line-through;
+}
+
+@media only screen and (max-width: 614px) {
+    .app-container{
+        min-width: 500px;
+    }
+}
+
+@media only screen and (max-width: 511px) {
+    .app-container{
+        min-width: 90vw;
+    }
+
+    .items-left-info{
+        grid-area: e;
+    }
+
+    .btn {
+        margin-bottom: 12px;
+    }
+
+    .all-btn{
+        grid-area: a;
+        margin-top: 12px;
+    }
+
+    .active-btn {
+        grid-area: b;
+    }
+
+    .completed-btn {
+        grid-area: c;
+    }
+
+    .clear-completed-btn {
+        grid-area: d;
+    }
+
+    .actions-bar {
+        display: grid;
+        grid-template-areas: 
+            "e a"
+            "b c"
+            "d d";
+    }
+}

@@ -1,0 +1,40 @@
+/* - Very Dark Blue: hsl(235, 21%, 11%)
+- Very Dark Desaturated Blue: hsl(235, 24%, 19%)
+- Light Grayish Blue: hsl(234, 39%, 85%)
+- Light Grayish Blue (hover): hsl(236, 33%, 92%)
+- Dark Grayish Blue: hsl(234, 11%, 52%)
+- Very Dark Grayish Blue: hsl(233, 14%, 35%)
+- Very Dark Grayish Blue: hsl(237, 14%, 26%) */
+body {
+    background-color: hsl(235, 21%, 11%);
+}
+
+.task {
+    background-color: hsl(235, 24%, 19%);
+    color: hsl(234, 39%, 85%);
+    border-bottom: 1px solid hsl(233, 14%, 35%);
+}
+
+.actions-bar{
+    background-color: hsl(235, 24%, 19%);
+    color: hsl(237, 14%, 26%);
+}
+
+input[type=text] {
+    background-color: hsl(235, 24%, 19%);
+    color: hsl(234, 11%, 52%);
+}
+
+.over{
+    background-color: rgb(87, 87, 87) !important;
+}
+
+.message{
+    color: hsl(234, 11%, 52%);
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.inputed-values-container, .actions-bar {
+    box-shadow: rgba(32, 32, 32, 0.2) 0px 8px 24px;
+}
